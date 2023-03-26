@@ -1,6 +1,6 @@
 Projekt to WebAPI napisane w ASP.NET Core 6. Starałem się go wykonać zgodnie z konceptem Clean Architecture.
 
-Sposób wykonania wymagać:
+Sposób wykonania wymagań:
 
   - Do stworzenia warstwy bazy danych został użyty Entity Framework Core.
   - Metody walidujące pola rejestracji i logowania zawarte są w klasie ValidationService, do sprawdzania poprawności odbieranych DTO użyte zostały jeszcze DataAnnotations. Późniejsza walidacja przeprowadzana jest w klasie AccountService.

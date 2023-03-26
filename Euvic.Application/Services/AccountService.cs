@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.Extensions.DependencyInjection;
 using Euvic.Domain.Models;
 using Euvic.Application.Extensions;
-using System.Threading;
 
 namespace Euvic.Application.Services
 {

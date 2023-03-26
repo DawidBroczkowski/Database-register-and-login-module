@@ -6,17 +6,9 @@ namespace Euvic.Application.Interfaces
     public interface IUserRepository
     {
         /// <summary>
-        /// Adds new user to database.
+        /// Adds a new user to the database.
         /// </summary>
-        /// <param name="pesel">User's PESEL number</param>
-        /// <param name="name">User's first name</param>
-        /// <param name="surname">User's surname</param>
-        /// <param name="email">User's E-mail address</param>
-        /// <param name="phoneNumber">User's phone number</param>
-        /// <param name="passwordHash">User's generated password hash</param>
-        /// <param name="passwordSalt">User's generated password salt</param>
-        /// <param name="age">User's age</param>
-        /// <param name="electricityConsumption">User's electricity consumption in kWh</param>
+        /// <param name="user">The user</param>
         /// <returns></returns>
         Task AddNewUserAsync(User user, CancellationToken cancellationToken);
         /// <summary>

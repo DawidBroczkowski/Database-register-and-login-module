@@ -1,5 +1,4 @@
-﻿
-using Euvic.Domain.Models;
+﻿using Euvic.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Euvic.Infrastructure.DataAccess

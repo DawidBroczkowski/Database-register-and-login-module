@@ -12,7 +12,7 @@
         /// <summary>
         /// Creates a JSON Web Token for the logged in user.
         /// </summary>
-        /// <param name="user">Logged in user.</param>
+        /// <param name="email">Logged in user's E-mail</param>
         /// <returns>JSON Web Token with user's E-mail claim.</returns>
         string CreateToken(string email);
         /// <summary>

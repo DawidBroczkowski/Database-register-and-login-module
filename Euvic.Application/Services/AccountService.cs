@@ -76,6 +76,7 @@ namespace Euvic.Application.Services
             _authService.CreatePasswordHash(registerDto.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
             // Add new user to the database
+            registerDto.Age = age;
             User user = registerDto.AsUser(passwordHash, passwordSalt);
 
             await _repository.AddNewUserAsync(user, cancellationToken);

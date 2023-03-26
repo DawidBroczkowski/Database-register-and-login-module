@@ -31,12 +31,7 @@ namespace Euvic.Api.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<ValidationResult>> LoginAsync(LoginDto loginDto, CancellationToken cancellationToken)
         {
-            string token;
-
-            // Try to log in the user
-            token = await _accountService.LoginUserAsync(loginDto, cancellationToken);
-
-            // Return JWT
+            string token = await _accountService.LoginUserAsync(loginDto, cancellationToken);
             return Ok(token);
         }
     }

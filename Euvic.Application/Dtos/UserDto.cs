@@ -2,6 +2,7 @@
 {
     public record UserDto
     {
+#pragma warning disable CS8618
         public string Pesel { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }

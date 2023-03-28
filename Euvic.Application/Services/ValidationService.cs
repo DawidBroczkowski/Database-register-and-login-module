@@ -7,6 +7,7 @@ namespace Euvic.Application.Services
     {
         public bool ValidateEmail(string email)
         {
+            email.Trim();
             try
             {
                 var addr = new MailAddress(email);

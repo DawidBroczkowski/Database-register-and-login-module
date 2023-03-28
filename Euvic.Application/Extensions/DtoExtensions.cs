@@ -9,7 +9,7 @@ namespace Euvic.Application.Extensions
         {
             return new User()
             {
-                Age = registerDto.Age.Value,
+                Age = registerDto.Age!.Value,
                 Email = registerDto.Email,
                 ElectricityConsumption = registerDto.ElectricityConsumption,
                 Name = registerDto.Name,

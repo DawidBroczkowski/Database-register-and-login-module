@@ -14,7 +14,7 @@ namespace Euvic.Api
             {
                 errorApp.Run(async context =>
                 {
-                    var exception = context.Features.Get<IExceptionHandlerFeature>().Error;
+                    var exception = context.Features.Get<IExceptionHandlerFeature>()!.Error;
                     var problemDetails = new ValidationProblemDetails();
 
                     if (exception is ValidationException validationException)
@@ -27,7 +27,7 @@ namespace Euvic.Api
                             var value = validationException.Data[key];
                             if (value is string errorMessage)
                             {
-                                problemDetails.Errors.Add(key.ToString(), new[] { errorMessage });
+                                problemDetails.Errors.Add(key.ToString()!, new[] { errorMessage });
                             }
                         }
                     }

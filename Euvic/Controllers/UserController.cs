@@ -36,6 +36,7 @@ namespace Euvic.Api.Controllers
             return Ok(user);
         }
 
+        // GET with body is not advised under HTTP specfication
         [AllowAnonymous]
         [HttpPost("Single")]
         public async Task<ActionResult<UserDto>> GetSingleUserAsync(LoginDto loginDto, CancellationToken cancellationToken)

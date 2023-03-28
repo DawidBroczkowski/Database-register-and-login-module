@@ -5,6 +5,7 @@ namespace Euvic.Domain.Models
 {
     public record User
     {
+#pragma warning disable CS8618
         [Key]
         [Required]
         [MaxLength(11)]

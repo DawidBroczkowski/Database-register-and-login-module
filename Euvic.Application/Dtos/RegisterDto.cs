@@ -4,6 +4,7 @@ namespace Euvic.Application.Dtos
 {
     public record RegisterDto
     {
+#pragma warning disable CS8618
         [Required]
         [MinLength(11), MaxLength(11)]
         public string Pesel { get; set; }

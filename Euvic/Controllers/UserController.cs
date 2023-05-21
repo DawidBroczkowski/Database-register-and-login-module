@@ -35,14 +35,5 @@ namespace Euvic.Api.Controllers
             UserDto user = await _userService.GetLoggedUserAsync(email, cancellationToken);
             return Ok(user);
         }
-
-        // GET with body is not advised under HTTP specfication
-        [AllowAnonymous]
-        [HttpPost("Single")]
-        public async Task<ActionResult<UserDto>> GetSingleUserAsync(LoginDto loginDto, CancellationToken cancellationToken)
-        {
-            UserDto user = await _userService.GetUserAsync(loginDto.Email, loginDto.Password, cancellationToken);
-            return Ok(user);
-        }
     }
 }

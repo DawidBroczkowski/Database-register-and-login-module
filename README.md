@@ -9,4 +9,4 @@ Szczegóły implementacji:
   - Błędy są obsługiwane przez Global Exception Handler, który jest skonfigurowany w klasie ExceptionHandlerExtensions.
   - Hasła są zabezpieczane przez hashowanie HMACSHA512 i dodawanie soli.
   - Uwierzytelnianie jest realizowane przy użyciu AspNetCore.Authentication i AspNetCore.Authorization. Po zalogowaniu się zwracany jest JSON Web Token, który zawiera unikalny E-mail użytkownika jako claim.
-  - Metoda zwracająca dane wszystkich użytkowników wymaga uwierzytelnienia, a metoda zwracająca dane pojedynczego użytkownika jest dostępna w dwóch wersjach. Jedna wymaga uwierzytelnienia, ponieważ zwraca dane zalogowanego użytkownika. Druga zwraca dane wybranego użytkownika na podstawie podanego E-maila i hasła.
+  - Metoda zwracająca dane wszystkich użytkowników i metoda zwracające dane zalogowanego użytkownika wymagają uwierzytelnienia.
